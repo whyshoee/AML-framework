@@ -1,0 +1,19 @@
+{
+  "total": 50000,
+  "label_distribution": {
+    "1": 25000,
+    "0": 25000
+  },
+  "attack_type_distribution": {
+    "benign": 25000,
+    "sql_injection": 3215,
+    "prompt_injection": 3142,
+    "command_injection": 3136,
+    "ssrf": 3135,
+    "path_traversal": 3129,
+    "xss": 3124,
+    "json_bomb": 3086,
+    "mass_assignment": 3033
+  },
+  "avg_payload_length": 129.56
+}
