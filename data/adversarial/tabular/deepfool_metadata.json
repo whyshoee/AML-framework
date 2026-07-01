@@ -1,0 +1,12 @@
+{
+  "attack_name": "DeepFool",
+  "modality": "tabular",
+  "epsilon": 0.1,
+  "perturbation_norm": 5792.69287109375,
+  "attack_success_rate": 0.0625,
+  "adversarial_accuracy": 0.9375,
+  "clean_accuracy": 1.0,
+  "success": true,
+  "iterations": 1,
+  "saved_at": "2026-06-23T06:47:57.379642"
+}
