@@ -1,0 +1,22 @@
+{
+  "accuracy": 0.9992,
+  "precision": 0.9994070560332049,
+  "recall": 0.9988148148148148,
+  "f1": 0.9991108476585655,
+  "auc_roc": 0.9999979169472503,
+  "confusion_matrix": [
+    [
+      4123,
+      2
+    ],
+    [
+      4,
+      3371
+    ]
+  ],
+  "n_test_samples": 7500,
+  "best_hyperparameters": {
+    "learning_rate": 0.1,
+    "max_depth": 4
+  }
+}
