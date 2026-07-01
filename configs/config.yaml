@@ -1,0 +1,49 @@
+# =============================================================================
+# AML FinTech Framework — Master Configuration
+# [Both Partners]
+# All attack hyper-parameters, model paths, and sweep settings live here.
+# The AttackRunner reads this file at startup; changing values here changes
+# behaviour across the entire framework without touching any Python source.
+# =============================================================================
+
+# ── Per-attack default hyper-parameters ──────────────────────────────────────
+attacks:
+
+  fgsm:
+    epsilon: 0.1            # L-inf perturbation budget (0 = no attack, 1 = full)
+
+  pgd:
+    epsilon: 0.1            # L-inf perturbation budget
+    n_steps: 40             # number of projected gradient descent steps
+    step_size: 0.01         # per-step update size (α)
+    random_start: true      # randomise starting point within ε-ball (improves coverage)
+
+  cw:
+    c: 0.0001               # regularisation weight (trades off norm vs. misclassification)
+    kappa: 0                # confidence margin (0 = just cross the boundary)
+    n_steps: 1000           # Adam optimisation steps
+    lr: 0.01                # Adam learning rate
+
+  deepfool:
+    max_iter: 50            # maximum linearisation iterations before giving up
+    overshoot: 0.02         # small extra step past the boundary to guarantee flip
+
+# ── Epsilon sweep values used by run_epsilon_sweep() ─────────────────────────
+epsilon_sweep: [0.01, 0.05, 0.1, 0.2, 0.3, 0.5]
+
+# ── Paths to trained model artefacts ─────────────────────────────────────────
+models:
+  resnet18_path:   "models/resnet18/best_model.pth"
+  xgboost_path:    "models/xgboost/model.json"
+  distilbert_path: "models/distilbert/best/"
+
+# ── Feature bounds used by TabularAdapter post-processing ────────────────────
+tabular_feature_bounds:
+  src_port:                 [1024, 65535]
+  dst_port:                 [1,    65535]
+  bytes_received:           [0,    65535]
+  connection_duration_ms:   [0,    60000]
+  payload_entropy:          [0.0,  8.0]
+  packet_size:              [0,    65535]
+  src_ip_frequency:         [0,    10000]
+  payload_printable_ratio:  [0.0,  1.0]
