@@ -1,0 +1,13 @@
+{
+  "source": "NSL-KDD (Tavallaee, Bagheri, Lu, Ghorbani, 2009)",
+  "source_mirror": "https://raw.githubusercontent.com/jmnwong/NSL-KDD-Dataset/master/KDDTrain+_20Percent.txt",
+  "citation": "M. Tavallaee, E. Bagheri, W. Lu, and A. Ghorbani, \"A Detailed Analysis of the KDD CUP 99 Data Set,\" Second IEEE Symposium on Computational Intelligence for Security and Defense Applications (CISDA), 2009.",
+  "subset": "20percent",
+  "n_rows": 25192,
+  "label_distribution": {
+    "0": 13449,
+    "1": 11743
+  },
+  "note": "Features are an APPROXIMATE mapping from NSL-KDD's connection-level statistics onto the 7-feature honeypot schema -- not a literal equivalence. See in-script comments in map_to_honeypot_schema() for the rationale behind each field.",
+  "generated_at": "2026-06-17T12:34:22.770055+00:00"
+}
