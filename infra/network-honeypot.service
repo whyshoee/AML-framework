@@ -1,0 +1,16 @@
+[Unit]
+Description=AML FinTech Network Honeypot (Multi-Port)
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/aml_fintech
+ExecStart=/usr/bin/python3.12 honeypots/network_honeypot.py
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ubuntu/aml_fintech/logs/network_honeypot.log
+StandardError=append:/home/ubuntu/aml_fintech/logs/network_honeypot.log
+
+[Install]
+WantedBy=multi-user.target

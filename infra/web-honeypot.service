@@ -1,0 +1,17 @@
+# infra/web-honeypot.service
+[Unit]
+Description=AML FinTech Web Honeypot
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/aml_fintech/honeypots   
+ExecStart=/home/ubuntu/.local/bin/gunicorn -w 4 -b 0.0.0.0:5001 web_honeypot:app
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/ubuntu/aml_fintech/logs/web_honeypot.log
+StandardError=append:/home/ubuntu/aml_fintech/logs/web_honeypot.log
+
+[Install]
+WantedBy=multi-user.target
