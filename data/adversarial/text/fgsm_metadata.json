@@ -1,0 +1,12 @@
+{
+  "attack_name": "FGSM",
+  "modality": "text",
+  "epsilon": 0.0,
+  "perturbation_norm": 0.0,
+  "attack_success_rate": 0.5,
+  "adversarial_accuracy": 0.5,
+  "clean_accuracy": 1.0,
+  "success": true,
+  "iterations": 1,
+  "saved_at": "2026-06-23T06:47:57.382634"
+}
