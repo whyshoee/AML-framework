@@ -1,0 +1,32 @@
+# NOTE: Most packages here use >= rather than == pins. The original exact
+# pins (torch==2.2.0, scikit-learn==1.4.1, etc.) predate prebuilt wheels for
+# newer Python versions (3.12/3.13) and fail to install with
+# "No matching distribution found" on this machine's Python version.
+# >= lets pip pick the newest compatible build instead. torch and
+# torchvision are kept as an exact, mutually-compatible pair since their
+# versions must match each other precisely.
+
+torch==2.6.0
+torchvision==0.21.0
+transformers>=4.39.0
+xgboost>=2.0.3
+flask>=3.0.2
+gunicorn>=21.2.0
+fastapi>=0.110.0
+uvicorn>=0.29.0
+sqlmodel>=0.0.16
+anthropic>=0.21.0
+scikit-learn>=1.5.2
+matplotlib>=3.8.4
+seaborn>=0.13.2
+Pillow>=10.3.0
+requests>=2.31.0
+python-dotenv>=1.0.1
+numpy>=1.26.4
+pandas>=2.2.1
+foolbox>=3.3.3
+adversarial-robustness-toolbox>=1.17.1
+pytest>=8.1.1
+black>=24.3.0
+isort>=5.13.2
+flake8>=7.0.0

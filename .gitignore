@@ -1,0 +1,75 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables (never commit secrets)
+.env
+*.env
+!.env.example
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Model artifacts and large data files
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+data/raw/**/*
+data/processed/**/*
+data/adversarial/**/*
+!data/raw/**/.gitkeep
+!data/processed/**/.gitkeep
+!data/adversarial/**/.gitkeep
+models/resnet18/*.pth
+models/distilbert/best/
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+*.onnx
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Reports (generated, not source)
+reports/generated/*
+!reports/generated/.gitkeep
+
+# pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# mypy / ruff caches
+.mypy_cache/
+.ruff_cache/
